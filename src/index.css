@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  /* Modern Web Best Practice: automatically adapt native UI */
+  color-scheme: light dark;
+
+  /* Theme variables (Igloo.inc / Cyber style) */
+  --bg-primary: light-dark(#ffffff, #0f172a);
+  --bg-panel: light-dark(rgba(255, 255, 255, 0.7), rgba(15, 23, 42, 0.6));
+  --text-primary: light-dark(#1e293b, #f8fafc);
+  --text-secondary: light-dark(#64748b, #94a3b8);
+  --accent-blue: #00e5ff;
+  --accent-purple: #c084fc;
+  
+  /* Force dark mode for this specific immersive dashboard if preferred */
+  color-scheme: dark;
+  --bg-primary: #020617;
+  --bg-panel: rgba(15, 23, 42, 0.4);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heavy-component {
+  /* Modern Web Best Practice: Performance optimization for heavy background components */
+  content-visibility: auto;
+  contain-intrinsic-size: auto none auto 100vh;
+}
