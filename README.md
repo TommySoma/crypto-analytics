@@ -20,7 +20,7 @@ A professional, real-time cryptocurrency dashboard inspired by cutting-edge web 
 - **Charting:** Recharts
 - **Icons:** Lucide React
 
-## 📦 Local Development
+## Local Development
 
 1. **Clone the repository:**
    ```bash
