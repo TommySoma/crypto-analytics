@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Background3D from './components/Background3D';
 import LiveTicker from './components/LiveTicker';
 import PriceChart from './components/PriceChart';
@@ -96,6 +97,7 @@ function App() {
           &copy; {new Date().getFullYear()} Crypto dashboard. Built with React Three Fiber, Recharts, and Binance WS.
         </footer>
       </main>
+      <SpeedInsights />
     </div>
   );
 }
